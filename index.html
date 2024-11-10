@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio 13</title>
+</head>
+<body>
+    <script>
+        let num1=parseFloat(prompt("numero 1: "));
+        let num2=parseFloat(prompt("numero 2: "));
+        let op=prompt("Ingrese la operacion: ");
+
+        let respueta =Calculadora(num1,num2,op);
+
+        document.write("resultado : " + respueta );
+
+        function Calculadora(numero1, numero2, operacion){      
+            let resultado;
+
+            switch (operacion) {
+                    case "sumar":
+                            resultado=Sumar(numero1,numero2);
+                            return resultado;
+                            break;
+                    case "restar":
+                            resultado=Restar(numero1,numero2);
+                            return resultado;                  
+                            break;
+                    case "Multiplicar":
+                            resultado=Multiplicar(numero1,numero2);
+                            return resultado;                  
+                            break;
+                    case "Dividir":
+                            resultado=Dividir(numero1,numero2);
+                            return resultado;                  
+                            break;
+                    default:
+                            return ("operacion desconocida");
+                }
+
+        }
+        function Sumar(a,b){
+            let respuesta=0;
+            respuesta=a+b;
+            return respuesta;
+        }
+
+        function Restar(a,b){
+            let respuesta=0;
+            respuesta=a-b;
+            return respuesta;
+        }
+
+        function Multiplicar(a,b){
+            let respuesta=0;
+            respuesta=a*b;
+            return respuesta;
+        }
+
+        function Dividir(a,b){
+            let respuesta=0;
+            respuesta=a/b;
+            return respuesta;
+        }
+    </script>
+</body>
+</html>
